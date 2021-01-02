@@ -107,7 +107,7 @@ function salarioAnualPromedio() {
     total = total + Number(inputSalarios[x].value);
    }
    let promedio = total / inputSalarios.length;
-   $anualPromedio.innerHTML = `El Salario Anual Promedio de su Familia es ${promedio}`
+   $anualPromedio.innerHTML = `El Salario Anual Promedio de su Familia es ${promedio.toFixed(2)}`
 
 }
 

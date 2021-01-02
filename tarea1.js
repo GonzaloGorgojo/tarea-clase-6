@@ -60,7 +60,7 @@ function edadMenor() {
     let familiarMenor = inputEdades[0];
 
     for (let j = 0; j < inputEdades.length; j++) {
-        if (familiarMenor > Number(inputEdades[j].value)) {
+        if (familiarMenor > inputEdades[j].value) {
             familiarMenor = Number(inputEdades[j].value);
         }
     }
@@ -91,7 +91,7 @@ function edadPromedio() {
     } else {
         edadMenor();
         edadMayor();
-        $edadPromedio.innerHTML = `La Edad Promedio es ${promedio}`
+        $edadPromedio.innerHTML = `La Edad Promedio es ${promedio.toFixed(2)}`
         $botonCalcularEdades.disabled = true;
     }
 }
