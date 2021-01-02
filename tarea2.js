@@ -83,7 +83,7 @@ function calcularSalarios(){
 
 function salarioMayor(){
     for(let x = 0; x < inputSalarios.length; x++) {
-        if(salarioAnualMayor < inputSalarios[x].value){
+        if(salarioAnualMayor < Number(inputSalarios[x].value)){
             salarioAnualMayor = Number(inputSalarios[x].value);
         }
     }
@@ -94,7 +94,7 @@ function salarioMenor() {
     let salarioAnualMenor = inputSalarios[0].value;
 
     for(let x= 0;x < inputSalarios.length; x++){
-        if(salarioAnualMenor > inputSalarios[x].value){
+        if(salarioAnualMenor > Number(inputSalarios[x].value)){
             salarioAnualMenor = Number(inputSalarios[x].value);
         }
     }

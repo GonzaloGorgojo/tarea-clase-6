@@ -49,7 +49,7 @@ $botonCalcularEdades.onclick = function () {
 
 function edadMayor() {
     for (let i = 0; i < inputEdades.length; i++) {
-        if (familiarMayor < inputEdades[i].value) {
+        if (familiarMayor < Number(inputEdades[i].value)) {
             familiarMayor = Number(inputEdades[i].value);
         }
     }
@@ -60,7 +60,7 @@ function edadMenor() {
     let familiarMenor = inputEdades[0];
 
     for (let j = 0; j < inputEdades.length; j++) {
-        if (familiarMenor > inputEdades[j].value) {
+        if (familiarMenor > Number(inputEdades[j].value)) {
             familiarMenor = Number(inputEdades[j].value);
         }
     }
