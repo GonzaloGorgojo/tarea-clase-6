@@ -26,7 +26,9 @@ function crearFamiliar(numero) {
 }
 
 
+
 $botonGrupoFamiliar.onclick = function () {
+    $contenedorInputAgregado.innerHTML = '';
     numeroFamiliar = $grupoFamiliar.value;
 
     if (numeroFamiliar <= 0) {
@@ -35,13 +37,14 @@ $botonGrupoFamiliar.onclick = function () {
         for (let i = 0; i < numeroFamiliar; i++) {
             crearFamiliar(i);
         }
-        $botonGrupoFamiliar.disabled = true;
     }
-
+   
     return false;
 }
 
 $botonCalcularEdades.onclick = function () {
+    familiarMayor = 0;
+    inputEdades.innerHTML = '';
     edadPromedio();
     $botonBorrarDatos.style.display = "block";
     return false;
@@ -57,6 +60,7 @@ function edadMayor() {
 }
 
 function edadMenor() {
+    
     let familiarMenor = inputEdades[0];
 
     for (let j = 0; j < inputEdades.length; j++) {
@@ -89,10 +93,10 @@ function edadPromedio() {
     if (numero <= 0) {
         alert('No puede haber edades negativas o 0')
     } else {
-        edadMenor();
+        
         edadMayor();
+        edadMenor();
         $edadPromedio.innerHTML = `La Edad Promedio es ${promedio.toFixed(2)}`
-        $botonCalcularEdades.disabled = true;
     }
 }
 $botonBorrarDatos.onclick = function () {
